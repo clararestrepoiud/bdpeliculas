@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 21, 2021 at 02:05 AM
+-- Generation Time: Apr 16, 2021 at 05:46 AM
 -- Server version: 10.4.11-MariaDB
 -- PHP Version: 7.4.3
 
@@ -63,6 +63,14 @@ CREATE TABLE `movie` (
   `rating` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+--
+-- Dumping data for table `movie`
+--
+
+INSERT INTO `movie` (`movie_id`, `name`, `description`, `image`, `create_at`, `release_date`, `actors`, `gender_id`, `rating`) VALUES
+(1, 'SPIDER-MAN', 'Spider-Man centers on student Peter Parker who, after being bitten by a genetically-altered spider, gains superhuman strength and the spider-like ability to cling to any surface. He vows to use his abilities to fight crime, coming to understand the words of his beloved Uncle Be', 'https://resizing.flixster.com/Ya4qPmsGhm8C8oeUHwEWohkTc2U=/206x305/v2/https://flxt.tmsimg.com/assets/p29821_p_v13_ai.jpg', '2021-04-15 19:58:50', '2002-04-25', 'Tobey Maguire', 1, 10),
+(2, 'Nomadland', 'A woman embarks on a journey through the American West after losing everything during the recession', 'https://pics.filmaffinity.com/Nomadland-118487105-mmed.jpg', '2021-04-15 22:38:05', '2021-02-19', 'Actualizacion 1', 3, 9);
+
 -- --------------------------------------------------------
 
 --
@@ -104,7 +112,9 @@ CREATE TABLE `user` (
 INSERT INTO `user` (`user_id`, `name`, `email`, `password`, `create_at`, `profile_id`) VALUES
 (1, 'Julio Martinez', 'julio.martinez@iudigital.com', 'abc', '2021-03-20 19:15:19', 1),
 (2, 'Adriana Aguilar', 'adriana@iudigital.com', '123', '2021-03-20 19:15:19', 2),
-(3, 'Clara Restrepo', 'clara@iudigital.com', '1234', '2021-03-20 19:15:19', 2);
+(3, 'Clara Restrepo', 'clara@iudigital.com', '1234', '2021-03-20 19:15:19', 2),
+(4, 'usuarioprueba', 'prueba@prueba.com', 'claveprueba', '2021-04-15 21:03:34', 2),
+(5, 'Pepito', 'pepito@prueba.com', 'clavepepito', '2021-04-15 22:37:43', 2);
 
 --
 -- Indexes for dumped tables
@@ -145,13 +155,13 @@ ALTER TABLE `user`
 -- AUTO_INCREMENT for table `movie`
 --
 ALTER TABLE `movie`
-  MODIFY `movie_id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `movie_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
-  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- Constraints for dumped tables
